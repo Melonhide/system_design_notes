@@ -1,9 +1,24 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.2.2 Chrome/134.0.6998.178 Electron/35.1.2 Safari/537.36" version="26.2.2">
   <diagram name="第 1 页" id="9DfvGnAm3WiwC3dsFYZc">
-    <mxGraphModel dx="1428" dy="849" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1828" dy="849" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="XOxDb2wPPV5bAnsxv8yy-1" value="Functional Requirments:&lt;div&gt;1. User input start location and end location and get an estimate fare&lt;/div&gt;&lt;div&gt;2. User request a ride&amp;nbsp;&lt;/div&gt;&lt;div&gt;3. Driver can check request and&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;accept/deny request&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;--- Out of Scope ---&lt;/div&gt;&lt;div&gt;- User or Driver cancel existed request&lt;/div&gt;&lt;div&gt;- User can select different types of car&lt;/div&gt;&lt;div&gt;- Schedule a ride&lt;/div&gt;&lt;div&gt;- Driver/Customer Rating&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-244" y="147" width="382" height="156" as="geometry" />
+        </mxCell>
+        <mxCell id="XOxDb2wPPV5bAnsxv8yy-2" value="Non-functional Requirements:&lt;div&gt;- low latency matching &amp;lt;1min match/fail&lt;/div&gt;&lt;div&gt;- consistency of booking 1 dirver to 1 customer&lt;/div&gt;&lt;div&gt;- high avabiliabity ouside matching&lt;/div&gt;&lt;div&gt;- high throughout, surges for peak hours. thounds of request in 100s in a region&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-244" y="312" width="442" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="XOxDb2wPPV5bAnsxv8yy-3" value="--- Out of Scope ---&lt;div&gt;- GDPR, user privacy&lt;/div&gt;&lt;div&gt;- resilience and handling system failure&lt;/div&gt;&lt;div&gt;- Monitoring, logging, alerting&lt;/div&gt;&lt;div&gt;- CI/CD pipeline&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-244" y="408" width="225" height="98" as="geometry" />
+        </mxCell>
+        <mxCell id="XOxDb2wPPV5bAnsxv8yy-4" value="Core Entities:&lt;div&gt;- Ride&lt;/div&gt;&lt;div&gt;- Driver&lt;/div&gt;&lt;div&gt;- Rider&lt;/div&gt;&lt;div&gt;- Location&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-244" y="519" width="90" height="98" as="geometry" />
+        </mxCell>
+        <mxCell id="XOxDb2wPPV5bAnsxv8yy-5" value="API:&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-244" y="617" width="41" height="41" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
