@@ -1,0 +1,208 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.2.2 Chrome/134.0.6998.178 Electron/35.1.2 Safari/537.36" version="26.2.2">
+  <diagram name="第 1 页" id="8MmAwPIfmJvveUq1dEla">
+    <mxGraphModel dx="2080" dy="999" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="jyUF03Z2-dlIFHQB_d6T-3" value="Function Requirements:&lt;div&gt;-&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- Book tickets&lt;/div&gt;&lt;div&gt;- View an event&lt;/div&gt;&lt;div&gt;- Search an event&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="-203" y="237" width="198" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="jyUF03Z2-dlIFHQB_d6T-5" value="Non-Function Requirements:&lt;div&gt;-&amp;nbsp; Low Latency Search&lt;/div&gt;&lt;div&gt;- Strong Consistency in Booking &amp;amp;&amp;amp; High Availability for searching and viewing events&lt;/div&gt;&lt;div&gt;- Read &amp;gt;&amp;gt; Write&lt;/div&gt;&lt;div&gt;- Scalability to handle surges of popular events&lt;/div&gt;&lt;div&gt;&amp;nbsp;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="-203" y="325" width="647" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="jyUF03Z2-dlIFHQB_d6T-6" value="--------------------------------------------------------------------------------------------------------------------------------&lt;br&gt;&lt;div&gt;Out of Scope:&lt;/div&gt;&lt;div&gt;1. GDPR Compliance&lt;/div&gt;&lt;div&gt;2. Fault Tolerance&lt;/div&gt;&lt;div&gt;3. etc.&lt;/div&gt;&lt;div&gt;&amp;nbsp;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="-203" y="397" width="518" height="128" as="geometry" />
+        </mxCell>
+        <mxCell id="jyUF03Z2-dlIFHQB_d6T-7" value="Core entities:&lt;div&gt;-Event&lt;/div&gt;&lt;div&gt;-Venue&lt;/div&gt;&lt;div&gt;-Performer&lt;/div&gt;&lt;div&gt;-Ticket&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="-203" y="486" width="517" height="128" as="geometry" />
+        </mxCell>
+        <mxCell id="jyUF03Z2-dlIFHQB_d6T-8" value="API:&lt;div&gt;- GET / event/eventId -&amp;gt; event&amp;amp;venue&amp;amp;performer&amp;amp;ticket[]&lt;/div&gt;&lt;div&gt;- GET /search?term={term}&amp;amp;location={location}&amp;amp;type={type}&amp;amp;date={date} -&amp;gt; Partial&amp;lt;Event&amp;gt;[]&lt;/div&gt;&lt;div&gt;- POST /booking/reserve&lt;/div&gt;&lt;div&gt;header JWT - session token&lt;/div&gt;&lt;div&gt;body:{&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;ticketId&lt;br&gt;&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- POST /booking/confirm&lt;/div&gt;&lt;div&gt;body{&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;ticketId,&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;paymentInfo (Third Party: Stripe)&lt;br&gt;&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="-202" y="603" width="498" height="211" as="geometry" />
+        </mxCell>
+        <mxCell id="jrBDbbrXla8fdd0dwMKK-1" value="Client" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="447" y="384" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="jrBDbbrXla8fdd0dwMKK-2" value="API Gateway&lt;div&gt;-Authetication&lt;/div&gt;&lt;div&gt;-rate limiting&lt;/div&gt;&lt;div&gt;-load balance&lt;/div&gt;&lt;div&gt;-routing&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="676" y="205" width="120" height="418" as="geometry" />
+        </mxCell>
+        <mxCell id="jrBDbbrXla8fdd0dwMKK-3" value="Database&lt;div&gt;(Postgres)&lt;/div&gt;&lt;div&gt;(Consistence -&amp;gt; ACID)&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="1395" y="320" width="195" height="195" as="geometry" />
+        </mxCell>
+        <mxCell id="jrBDbbrXla8fdd0dwMKK-4" value="Event CRUD Service" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="973" y="355.5" width="252" height="117" as="geometry" />
+        </mxCell>
+        <mxCell id="jrBDbbrXla8fdd0dwMKK-6" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="jrBDbbrXla8fdd0dwMKK-1" target="jrBDbbrXla8fdd0dwMKK-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="678" y="394" as="sourcePoint" />
+            <mxPoint x="739" y="332" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jrBDbbrXla8fdd0dwMKK-7" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="jrBDbbrXla8fdd0dwMKK-2" target="jrBDbbrXla8fdd0dwMKK-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="938" y="407" as="sourcePoint" />
+            <mxPoint x="953" y="284" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jrBDbbrXla8fdd0dwMKK-8" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=0.996;exitY=0.444;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="jrBDbbrXla8fdd0dwMKK-4" target="jrBDbbrXla8fdd0dwMKK-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1290" y="382.5" as="sourcePoint" />
+            <mxPoint x="1442" y="403.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jrBDbbrXla8fdd0dwMKK-9" value="NBA Playoff: {event1, event 2, }&lt;div&gt;Taylor Swift: {event3, event 4}&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1583" y="130" width="273.5" height="106" as="geometry" />
+        </mxCell>
+        <mxCell id="jrBDbbrXla8fdd0dwMKK-10" value="Venue&lt;div&gt;-venueId(PK)&lt;/div&gt;&lt;div&gt;-performerId(FK)&lt;/div&gt;&lt;div&gt;-address&lt;/div&gt;&lt;div&gt;-state&lt;/div&gt;&lt;div&gt;-city&lt;br&gt;-zipCode&lt;/div&gt;&lt;div&gt;-seatMap&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1777" y="316" width="156" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="jrBDbbrXla8fdd0dwMKK-11" value="Performer&lt;div&gt;-performerId(PK)&lt;/div&gt;&lt;div&gt;-name&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1929" y="302" width="156" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="jrBDbbrXla8fdd0dwMKK-12" value="ticket&lt;div&gt;-ticketId(PK)&lt;/div&gt;&lt;div&gt;-eventId(FK)&lt;/div&gt;&lt;div&gt;-seat&lt;/div&gt;&lt;div&gt;-price&lt;/div&gt;&lt;div&gt;-status: available, booked&lt;/div&gt;&lt;div&gt;-userId&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1624" y="446" width="279" height="101" as="geometry" />
+        </mxCell>
+        <mxCell id="jrBDbbrXla8fdd0dwMKK-13" value="Search" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="970" y="188" width="252" height="117" as="geometry" />
+        </mxCell>
+        <mxCell id="jrBDbbrXla8fdd0dwMKK-14" value="&lt;span style=&quot;text-align: left;&quot;&gt;/search?term={term}&amp;amp;location={location}&amp;amp;type={type}&amp;amp;date={date} -&amp;gt; Partial&amp;lt;Event&amp;gt;[]&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="792" y="93" width="577" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="jrBDbbrXla8fdd0dwMKK-17" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.435;exitDx=0;exitDy=0;entryX=-0.004;entryY=0.564;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;" edge="1" parent="1" source="jrBDbbrXla8fdd0dwMKK-2" target="jrBDbbrXla8fdd0dwMKK-13">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="865" y="246" as="sourcePoint" />
+            <mxPoint x="975" y="246" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jrBDbbrXla8fdd0dwMKK-18" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="jrBDbbrXla8fdd0dwMKK-13" target="jrBDbbrXla8fdd0dwMKK-43">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1245" y="230" as="sourcePoint" />
+            <mxPoint x="1455" y="233" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jrBDbbrXla8fdd0dwMKK-19" value="Booking" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="970" y="520" width="252" height="117" as="geometry" />
+        </mxCell>
+        <mxCell id="jrBDbbrXla8fdd0dwMKK-20" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=0.992;exitY=0.557;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitPerimeter=0;" edge="1" parent="1" source="jrBDbbrXla8fdd0dwMKK-2" target="jrBDbbrXla8fdd0dwMKK-19">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="865" y="472.5" as="sourcePoint" />
+            <mxPoint x="975" y="472.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jrBDbbrXla8fdd0dwMKK-27" value="reserve(ticketId)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="jrBDbbrXla8fdd0dwMKK-20">
+          <mxGeometry x="-0.0896" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jrBDbbrXla8fdd0dwMKK-31" value="confirm(ticketId,&lt;div&gt;paymentDetails)&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="jrBDbbrXla8fdd0dwMKK-20">
+          <mxGeometry x="0.1339" y="1" relative="1" as="geometry">
+            <mxPoint x="-10" y="16" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jrBDbbrXla8fdd0dwMKK-21" value="Third Party Payment Process(Stripe)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="970" y="693" width="252" height="117" as="geometry" />
+        </mxCell>
+        <mxCell id="jrBDbbrXla8fdd0dwMKK-23" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1.004;exitY=0.436;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.036;entryY=0.713;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="jrBDbbrXla8fdd0dwMKK-19" target="jrBDbbrXla8fdd0dwMKK-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1234" y="417" as="sourcePoint" />
+            <mxPoint x="1401" y="417" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jrBDbbrXla8fdd0dwMKK-29" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="jrBDbbrXla8fdd0dwMKK-19" target="jrBDbbrXla8fdd0dwMKK-21">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1042" y="697" as="sourcePoint" />
+            <mxPoint x="1092" y="647" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jrBDbbrXla8fdd0dwMKK-30" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="jrBDbbrXla8fdd0dwMKK-21" target="jrBDbbrXla8fdd0dwMKK-19">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1358" y="570" as="sourcePoint" />
+            <mxPoint x="1408" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jrBDbbrXla8fdd0dwMKK-32" value="Cron Job&lt;div&gt;(10 mins)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1601" y="711" width="135" height="57" as="geometry" />
+        </mxCell>
+        <mxCell id="jrBDbbrXla8fdd0dwMKK-36" value="Ticket Lock&lt;br&gt;Redis Cache&lt;div&gt;TTL&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="1345" y="515" width="105" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="jrBDbbrXla8fdd0dwMKK-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.01;entryY=0.61;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="jrBDbbrXla8fdd0dwMKK-19" target="jrBDbbrXla8fdd0dwMKK-36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jrBDbbrXla8fdd0dwMKK-39" value="reserve" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1263" y="560" width="58" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="jrBDbbrXla8fdd0dwMKK-40" value="{ticketId: true} TTL - 10min" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1321" y="627" width="159" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="jrBDbbrXla8fdd0dwMKK-41" value="12:05pm down&lt;br&gt;11:55am droped" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1345" y="660" width="105" height="41" as="geometry" />
+        </mxCell>
+        <mxCell id="jrBDbbrXla8fdd0dwMKK-43" value="ElasticSearch&lt;div&gt;(AWS opensearch)&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="1439.25" y="138" width="106.5" height="106.5" as="geometry" />
+        </mxCell>
+        <mxCell id="jrBDbbrXla8fdd0dwMKK-44" value="Event&lt;div&gt;-eventId(PK)&lt;/div&gt;&lt;div&gt;-venueId(FK)&lt;/div&gt;&lt;div&gt;-performerId(FK)&lt;/div&gt;&lt;div&gt;-tickets[]&lt;/div&gt;&lt;div&gt;-eventDescription&lt;/div&gt;&lt;div&gt;-eventName&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1634" y="326" width="156" height="106" as="geometry" />
+        </mxCell>
+        <mxCell id="jrBDbbrXla8fdd0dwMKK-48" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="jrBDbbrXla8fdd0dwMKK-3" target="jrBDbbrXla8fdd0dwMKK-43">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1545.75" y="290" as="sourcePoint" />
+            <mxPoint x="1595.75" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jrBDbbrXla8fdd0dwMKK-49" value="CDC" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="jrBDbbrXla8fdd0dwMKK-48">
+          <mxGeometry x="-0.1318" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jrBDbbrXla8fdd0dwMKK-50" value="node query caching" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1590" y="237" width="123" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="jrBDbbrXla8fdd0dwMKK-51" value="Redis" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1283" y="130" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="jrBDbbrXla8fdd0dwMKK-52" value="CDN" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="441" y="234" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="jrBDbbrXla8fdd0dwMKK-53" value="Less useful if we have more terms/permutations" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="350" y="316" width="273" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="jrBDbbrXla8fdd0dwMKK-54" value="&lt;span style=&quot;&quot;&gt;{&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;&quot;&gt;/search?term={term}&amp;amp;location={location}&amp;amp;type={type}&amp;amp;date={date},&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;result&lt;br&gt;}&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="324" y="188" width="371" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="jrBDbbrXla8fdd0dwMKK-55" value="Live Seat Map:&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;1. Long Pulling&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;2. Websocket(Presistent Connection)(Bidiretcion)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;3. SSE(Sever Send Events)(Unidiretcion)&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="369.5" y="620" width="280" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="jrBDbbrXla8fdd0dwMKK-57" value="Virtual Waiting Queue(Redis)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="666" y="668" width="252" height="63" as="geometry" />
+        </mxCell>
+        <mxCell id="jrBDbbrXla8fdd0dwMKK-58" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.445;exitY=0.995;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="jrBDbbrXla8fdd0dwMKK-2" target="jrBDbbrXla8fdd0dwMKK-57">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="490" y="537" as="sourcePoint" />
+            <mxPoint x="540" y="487" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jrBDbbrXla8fdd0dwMKK-59" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="jrBDbbrXla8fdd0dwMKK-57" target="jrBDbbrXla8fdd0dwMKK-19">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="490" y="537" as="sourcePoint" />
+            <mxPoint x="540" y="487" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jrBDbbrXla8fdd0dwMKK-60" value="Redis" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1279" y="278" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="jrBDbbrXla8fdd0dwMKK-61" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="jrBDbbrXla8fdd0dwMKK-60">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1227" y="388" as="sourcePoint" />
+            <mxPoint x="1401" y="368" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jrBDbbrXla8fdd0dwMKK-62" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.968;entryY=0.596;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="jrBDbbrXla8fdd0dwMKK-3" target="jrBDbbrXla8fdd0dwMKK-60">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1503" y="330" as="sourcePoint" />
+            <mxPoint x="1502" y="255" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
