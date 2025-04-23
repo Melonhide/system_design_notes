@@ -1,0 +1,172 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.2.2 Chrome/134.0.6998.178 Electron/35.1.2 Safari/537.36" version="26.2.2">
+  <diagram name="第 1 页" id="NIxka2eZlwxOyhy8VufI">
+    <mxGraphModel dx="1828" dy="1249" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="OLnzf5XNml7A9ihmJqhR-20" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="166" y="301.75" width="143" height="220.5" as="geometry" />
+        </mxCell>
+        <mxCell id="ZuqKMJGfpsr1gteg3rEK-1" value="Function Requirments&lt;div&gt;1. User can upload files&lt;/div&gt;&lt;div&gt;2. User can download files&lt;/div&gt;&lt;div&gt;3. User can sync file across devices&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="-395" y="148" width="209" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ZuqKMJGfpsr1gteg3rEK-2" value="Non-functional Requirments:&lt;div&gt;- Availability &amp;gt;&amp;gt; Consistency&lt;/div&gt;&lt;div&gt;- Low latency upload and download (as low as possible)&lt;/div&gt;&lt;div&gt;- support large files (50GB)&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- Resume uploads/downloads&lt;/div&gt;&lt;div&gt;- high data integrity (sync accuracy)&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="-393" y="253" width="315" height="98" as="geometry" />
+        </mxCell>
+        <mxCell id="OLnzf5XNml7A9ihmJqhR-1" value="Core Entities:&lt;div&gt;- File(Blob Storage)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;div&gt;- FileMetaData&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- Users&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-395" y="493" width="122" height="113" as="geometry" />
+        </mxCell>
+        <mxCell id="OLnzf5XNml7A9ihmJqhR-2" value="API&lt;div&gt;POST /upload -&amp;gt; fileId&amp;nbsp;&lt;/div&gt;&lt;div&gt;{&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;File&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;File Metadata&lt;br&gt;&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Patch /update/fileId&lt;/div&gt;&lt;div&gt;{&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;file id&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;File&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;File Metadata&lt;br&gt;&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;GET /download/fileId&lt;/div&gt;&lt;div&gt;{&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;file id&lt;br&gt;&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;GET /changes?since={timestamp} -&amp;gt; file metadata[]&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-393" y="683" width="293" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="OLnzf5XNml7A9ihmJqhR-3" value="Client" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="191" y="308.5" width="93" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="OLnzf5XNml7A9ihmJqhR-4" value="API Gateway&lt;div&gt;1. Routing&lt;/div&gt;&lt;div&gt;2. Load Balance&lt;/div&gt;&lt;div&gt;3. Rate Limiting&lt;/div&gt;&lt;div&gt;4. User Authetication&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="415" y="208.5" width="120" height="407" as="geometry" />
+        </mxCell>
+        <mxCell id="OLnzf5XNml7A9ihmJqhR-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="OLnzf5XNml7A9ihmJqhR-3" target="OLnzf5XNml7A9ihmJqhR-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OLnzf5XNml7A9ihmJqhR-6" value="File Service" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="703" y="201" width="215" height="93" as="geometry" />
+        </mxCell>
+        <mxCell id="OLnzf5XNml7A9ihmJqhR-7" value="File Database&lt;div&gt;DynamoDB&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1059" y="241" width="166" height="157" as="geometry" />
+        </mxCell>
+        <mxCell id="OLnzf5XNml7A9ihmJqhR-8" value="Blob Storage&lt;div&gt;S3&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1059" y="-44" width="166" height="157" as="geometry" />
+        </mxCell>
+        <mxCell id="OLnzf5XNml7A9ihmJqhR-9" value="&lt;div&gt;FileMetaData&amp;nbsp;&lt;/div&gt;&lt;div&gt;- fileId&lt;br&gt;&lt;/div&gt;&lt;div&gt;- size&lt;/div&gt;&lt;div&gt;- updateTime&lt;/div&gt;&lt;div&gt;- createTime&lt;/div&gt;&lt;div&gt;- type&lt;/div&gt;&lt;div&gt;- size&lt;/div&gt;&lt;div&gt;- compression algo&lt;/div&gt;&lt;div&gt;- ownerId&lt;/div&gt;&lt;div&gt;- shared users[]&lt;/div&gt;&lt;div&gt;- location(Blob storage)&lt;/div&gt;&lt;div&gt;- status: awaitingUpload, uploaded, upload in progress&lt;/div&gt;&lt;div&gt;- chuncks&lt;/div&gt;&lt;div&gt;[&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;{&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;chunck id (fingerprint),&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;/span&gt;status.&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;link&lt;/span&gt;,&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;t&lt;/span&gt;imestamp&#x9;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;}&lt;br&gt;&lt;/div&gt;&lt;div&gt;]&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1236" y="223.25" width="308" height="314" as="geometry" />
+        </mxCell>
+        <mxCell id="OLnzf5XNml7A9ihmJqhR-10" value="&lt;div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Users&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- userId&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;- ...&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1624" y="237.25" width="59" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="OLnzf5XNml7A9ihmJqhR-11" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="OLnzf5XNml7A9ihmJqhR-20" target="OLnzf5XNml7A9ihmJqhR-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="766" y="342" as="sourcePoint" />
+            <mxPoint x="816" y="292" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OLnzf5XNml7A9ihmJqhR-12" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=0.992;exitY=0.483;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="OLnzf5XNml7A9ihmJqhR-4" target="OLnzf5XNml7A9ihmJqhR-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="766" y="342" as="sourcePoint" />
+            <mxPoint x="816" y="292" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OLnzf5XNml7A9ihmJqhR-13" value="upload&lt;div&gt;download/fileId&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="OLnzf5XNml7A9ihmJqhR-12">
+          <mxGeometry x="-0.0137" y="3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OLnzf5XNml7A9ihmJqhR-14" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.688;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="OLnzf5XNml7A9ihmJqhR-6" target="OLnzf5XNml7A9ihmJqhR-7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="575" y="374" as="sourcePoint" />
+            <mxPoint x="625" y="324" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OLnzf5XNml7A9ihmJqhR-35" value="Write metadata" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="OLnzf5XNml7A9ihmJqhR-14">
+          <mxGeometry x="-0.0692" y="-4" relative="1" as="geometry">
+            <mxPoint y="-4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OLnzf5XNml7A9ihmJqhR-15" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=1;entryDx=0;entryDy=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" edge="1" parent="1" source="OLnzf5XNml7A9ihmJqhR-6" target="OLnzf5XNml7A9ihmJqhR-8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="885" y="247" as="sourcePoint" />
+            <mxPoint x="1064" y="261" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OLnzf5XNml7A9ihmJqhR-36" value="get preSigned URL" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="OLnzf5XNml7A9ihmJqhR-15">
+          <mxGeometry x="0.0641" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OLnzf5XNml7A9ihmJqhR-21" value="local folder" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="191" y="464.75" width="93" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="OLnzf5XNml7A9ihmJqhR-22" value="frontend code" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="191" y="362.5" width="93" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="OLnzf5XNml7A9ihmJqhR-24" value="Store raw bytes of the file" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1243" y="20" width="153" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="OLnzf5XNml7A9ihmJqhR-26" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="OLnzf5XNml7A9ihmJqhR-20" target="OLnzf5XNml7A9ihmJqhR-8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="622" y="136" as="sourcePoint" />
+            <mxPoint x="742" y="-8" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="355" y="35" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OLnzf5XNml7A9ihmJqhR-27" value="&lt;div&gt;Upload directly to S3&lt;/div&gt;Download directly from S3" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="OLnzf5XNml7A9ihmJqhR-26">
+          <mxGeometry x="0.2495" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OLnzf5XNml7A9ihmJqhR-28" value="1. Remote Change&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;div&gt;- Pull for changes&lt;/div&gt;&lt;div&gt;- Download new file to replace old&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;2. Local Change&lt;/div&gt;&lt;div&gt;- upldate file to remote&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-69" y="324" width="198" height="98" as="geometry" />
+        </mxCell>
+        <mxCell id="OLnzf5XNml7A9ihmJqhR-29" value="Windows API:&lt;div&gt;- FileSystemWatcher&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;MacOS API:&lt;/div&gt;&lt;div&gt;- FSEvents&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-69" y="438.25" width="129" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="OLnzf5XNml7A9ihmJqhR-30" value="local db" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="191" y="413.75" width="93" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="OLnzf5XNml7A9ihmJqhR-31" value="Sync Service" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="703" y="449" width="215" height="93" as="geometry" />
+        </mxCell>
+        <mxCell id="OLnzf5XNml7A9ihmJqhR-32" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="OLnzf5XNml7A9ihmJqhR-31">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="535" y="419" as="sourcePoint" />
+            <mxPoint x="638" y="447" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OLnzf5XNml7A9ihmJqhR-33" value="getChanges/timestamp" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="OLnzf5XNml7A9ihmJqhR-32">
+          <mxGeometry x="-0.097" y="-1" relative="1" as="geometry">
+            <mxPoint y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OLnzf5XNml7A9ihmJqhR-34" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="OLnzf5XNml7A9ihmJqhR-6" target="OLnzf5XNml7A9ihmJqhR-31">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="825" y="383" as="sourcePoint" />
+            <mxPoint x="928" y="411" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OLnzf5XNml7A9ihmJqhR-37" value="50GB * 8 /100mbps = 4000s =1.1hr&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="139" y="539" width="210" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="OLnzf5XNml7A9ihmJqhR-38" value="Chunk files in client side" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="148" y="580" width="147" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="OLnzf5XNml7A9ihmJqhR-40" value="Fingerprint each chunk: hash(bytes)" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="148" y="621" width="209" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="OLnzf5XNml7A9ihmJqhR-41" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="OLnzf5XNml7A9ihmJqhR-6" target="OLnzf5XNml7A9ihmJqhR-8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="784" y="416" as="sourcePoint" />
+            <mxPoint x="834" y="366" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1060" y="217" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OLnzf5XNml7A9ihmJqhR-42" value="S3 Notification" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="OLnzf5XNml7A9ihmJqhR-41">
+          <mxGeometry x="0.3758" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OLnzf5XNml7A9ihmJqhR-43" value="S3 Multiparts upload" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1252" y="51" width="127" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="OLnzf5XNml7A9ihmJqhR-44" value="CDN" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="191" y="103" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="OLnzf5XNml7A9ihmJqhR-46" value="Deep dive in Sync:&lt;div&gt;1. Sync to be fast&lt;/div&gt;&lt;div&gt;- adaptive polling&lt;br&gt;&lt;/div&gt;&lt;div&gt;- delta sync to only fetch changed chuncks&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;2. Sync to be consistent&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-118" y="537.25" width="244" height="98" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
