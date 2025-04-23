@@ -1,0 +1,34 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.2.2 Chrome/134.0.6998.178 Electron/35.1.2 Safari/537.36" version="26.2.2">
+  <diagram name="Page-1" id="9C-YQcGpO-vJdkxgT3L4">
+    <mxGraphModel dx="1420" dy="777" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="GKhWHmmIMckjG3j1GxFx-1" value="Function Requirments&lt;div&gt;- Click add and redirect to advertiser&#39;s website&lt;/div&gt;&lt;div&gt;- advertiser can query ad metrics over time&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-9" y="166" width="263" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="GKhWHmmIMckjG3j1GxFx-2" value="Non-function Requirments&lt;div&gt;- Scale to support 10k clicks per second&lt;/div&gt;&lt;div&gt;- Low latency analytics queries for advertisers&lt;/div&gt;&lt;div&gt;- Fault tolerance and accurate data collection (don&#39;t miss click)&lt;/div&gt;&lt;div&gt;- As realtime as possible&lt;/div&gt;&lt;div&gt;- Idempotent click tracking&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-9" y="235" width="349" height="98" as="geometry" />
+        </mxCell>
+        <mxCell id="GKhWHmmIMckjG3j1GxFx-3" value="&lt;div&gt;Input:&lt;/div&gt;&lt;div&gt;- User click&lt;/div&gt;&lt;div&gt;- Advertiser query&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Output:&lt;/div&gt;&lt;div&gt;- Redirection&lt;/div&gt;&lt;div&gt;- Aggregator Metrics&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Data Flow:&lt;/div&gt;&lt;div&gt;1. User click ad&lt;/div&gt;&lt;div&gt;2. Redirect to ad page&lt;/div&gt;&lt;div&gt;3. Server receive click&lt;/div&gt;&lt;div&gt;4. Click validation&lt;/div&gt;&lt;div&gt;5. Click logged&lt;/div&gt;&lt;div&gt;6. Click aggregator&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;7. Click data queried by advertiser&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-5" y="337" width="199" height="242" as="geometry" />
+        </mxCell>
+        <mxCell id="GKhWHmmIMckjG3j1GxFx-4" value="Browser" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="399" y="385" width="109" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="GKhWHmmIMckjG3j1GxFx-6" value="Click Processor" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="601" y="446" width="109" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="GKhWHmmIMckjG3j1GxFx-8" value="ad placement" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="601" y="337" width="109" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="GKhWHmmIMckjG3j1GxFx-9" value="ad database" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="784" y="321" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="GKhWHmmIMckjG3j1GxFx-10" value="Text" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="871" y="315" width="40" height="26" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
