@@ -1,0 +1,118 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.2.2 Chrome/134.0.6998.178 Electron/35.1.2 Safari/537.36" version="26.2.2">
+  <diagram name="第 1 页" id="QbSirSsGj48g5PiWV9QA">
+    <mxGraphModel dx="1828" dy="1249" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="FEAe-kX_XI-hOHjPLdzP-1" value="Functional Requirments&lt;div&gt;1. Create a short url from a long url&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- User can give an alias&lt;br&gt;&lt;/div&gt;&lt;div&gt;2. Redirect to long url using a short url&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-214" y="74" width="221" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="FEAe-kX_XI-hOHjPLdzP-2" value="Non-functional Requirments&lt;div&gt;1. High availability, eventual consistency for url shortening&lt;/div&gt;&lt;div&gt;2. Low latency to redirects (~200ms)&lt;/div&gt;&lt;div&gt;3. Scale to support 100M DAU and 1B urls&lt;/div&gt;&lt;div&gt;4. Unique shor url&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-214" y="156" width="325" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="FEAe-kX_XI-hOHjPLdzP-3" value="Core entities&lt;div&gt;- short url&lt;/div&gt;&lt;div&gt;- original url&lt;/div&gt;&lt;div&gt;- user&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-214" y="252" width="85" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="FEAe-kX_XI-hOHjPLdzP-4" value="API: User information in JWT&lt;div&gt;POST /getShortUrl/longUrl?{alias}?{expirationTime} -&amp;gt; shorturl&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;GET /redirect/shortUrl&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-214" y="339" width="349" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="FEAe-kX_XI-hOHjPLdzP-5" value="client" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="231" y="149" width="58" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="FEAe-kX_XI-hOHjPLdzP-6" value="API Gateway&lt;div&gt;1. Routing&lt;/div&gt;&lt;div&gt;2. load balancer&lt;/div&gt;&lt;div&gt;3. rate limiting&lt;/div&gt;&lt;div&gt;4. User Authentictaion&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="355" y="10.5" width="98" height="309" as="geometry" />
+        </mxCell>
+        <mxCell id="FEAe-kX_XI-hOHjPLdzP-8" value="GenerateURL" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="559" y="4" width="232" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="FEAe-kX_XI-hOHjPLdzP-9" value="Redirect&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;302&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="559" y="199.5" width="232" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="FEAe-kX_XI-hOHjPLdzP-10" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="FEAe-kX_XI-hOHjPLdzP-5" target="FEAe-kX_XI-hOHjPLdzP-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="353" y="331" as="sourcePoint" />
+            <mxPoint x="403" y="281" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FEAe-kX_XI-hOHjPLdzP-11" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1.01;exitY=0.471;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="FEAe-kX_XI-hOHjPLdzP-6" target="FEAe-kX_XI-hOHjPLdzP-8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="353" y="331" as="sourcePoint" />
+            <mxPoint x="403" y="281" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FEAe-kX_XI-hOHjPLdzP-12" value="DB&lt;div&gt;Postgres&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="901" y="-37" width="214" height="202" as="geometry" />
+        </mxCell>
+        <mxCell id="FEAe-kX_XI-hOHjPLdzP-13" value="urlTable:&lt;div&gt;- shortURL (PK)&lt;/div&gt;&lt;div&gt;- longURL&lt;/div&gt;&lt;div&gt;- alias&lt;/div&gt;&lt;div&gt;- userID&lt;/div&gt;&lt;div&gt;- timestamp&lt;/div&gt;&lt;div&gt;- expirationTime&lt;/div&gt;&lt;div&gt;metadata&amp;nbsp;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1141" y="-5" width="104" height="127" as="geometry" />
+        </mxCell>
+        <mxCell id="FEAe-kX_XI-hOHjPLdzP-14" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="FEAe-kX_XI-hOHjPLdzP-8" target="FEAe-kX_XI-hOHjPLdzP-12">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="464" y="166" as="sourcePoint" />
+            <mxPoint x="569" y="74" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FEAe-kX_XI-hOHjPLdzP-15" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0.009;entryY=0.563;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryPerimeter=0;" edge="1" parent="1" source="FEAe-kX_XI-hOHjPLdzP-6" target="FEAe-kX_XI-hOHjPLdzP-9">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="464" y="166" as="sourcePoint" />
+            <mxPoint x="569" y="74" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FEAe-kX_XI-hOHjPLdzP-16" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="FEAe-kX_XI-hOHjPLdzP-9" target="FEAe-kX_XI-hOHjPLdzP-27">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="801" y="74" as="sourcePoint" />
+            <mxPoint x="911" y="74" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FEAe-kX_XI-hOHjPLdzP-17" value="user:&lt;div&gt;- userId&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1247" y="-8" width="59" height="41" as="geometry" />
+        </mxCell>
+        <mxCell id="FEAe-kX_XI-hOHjPLdzP-18" value="Short (5-7)&lt;div&gt;Fast&lt;/div&gt;&lt;div&gt;unique&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="539" y="392" width="75" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="FEAe-kX_XI-hOHjPLdzP-19" value="1. Prefix/Postfix - not unique&lt;div&gt;2. UUID - too long&lt;/div&gt;&lt;div&gt;3. RandomNumber + Base 62 (collision after scaling up)&lt;/div&gt;&lt;div&gt;4. Hash the long + cut to 6 characters&lt;/div&gt;&lt;div&gt;5. Counter&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- incrementing a counter in base 62&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- predictability&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- Warn user not to short private url&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- rate limiting&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- bijective function&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="679" y="392" width="316" height="156" as="geometry" />
+        </mxCell>
+        <mxCell id="FEAe-kX_XI-hOHjPLdzP-21" value="&lt;div&gt;10^9&lt;/div&gt;Base 62:&lt;div&gt;0-61: 0-9, A-Z, a-z&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;62^6 = 56B&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="539" y="463" width="115" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="FEAe-kX_XI-hOHjPLdzP-23" value="&lt;div&gt;Redis&lt;/div&gt;Global Counter" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="635" y="-132" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="FEAe-kX_XI-hOHjPLdzP-27" value="Redis Cache" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="923" y="219.5" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="FEAe-kX_XI-hOHjPLdzP-28" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;" edge="1" parent="1" target="FEAe-kX_XI-hOHjPLdzP-12">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="794" y="259" as="sourcePoint" />
+            <mxPoint x="957" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FEAe-kX_XI-hOHjPLdzP-29" value="10*9 * 6 * 4&amp;nbsp; = 24 G&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;B&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="786" y="-171" width="130" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="FEAe-kX_XI-hOHjPLdzP-30" value="key: shortCode&lt;div&gt;value: longUrl&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1016" y="240" width="99" height="41" as="geometry" />
+        </mxCell>
+        <mxCell id="FEAe-kX_XI-hOHjPLdzP-31" value="CDN&lt;div&gt;(not get to server, same as 301)&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="355" y="-117" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="FEAe-kX_XI-hOHjPLdzP-32" value="10^8 /10^5 = 10^3 QPS/TPS&lt;div&gt;10^5 QPS/TPS&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="282" y="399" width="171" height="41" as="geometry" />
+        </mxCell>
+        <mxCell id="FEAe-kX_XI-hOHjPLdzP-33" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="FEAe-kX_XI-hOHjPLdzP-8" target="FEAe-kX_XI-hOHjPLdzP-23">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="632" y="-32" as="sourcePoint" />
+            <mxPoint x="742" y="-32" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FEAe-kX_XI-hOHjPLdzP-34" value="10*9" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1097" y="-98" width="43" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="FEAe-kX_XI-hOHjPLdzP-35" value="4+100+100+8+8+8 = 250byte&lt;div&gt;250GB&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1083" y="-60" width="176" height="41" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
