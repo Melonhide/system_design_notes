@@ -1,0 +1,22 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.2.2 Chrome/134.0.6998.178 Electron/35.1.2 Safari/537.36" version="26.2.2">
+  <diagram name="第 1 页" id="QfHsxKPyzoq_3hmnoPSE">
+    <mxGraphModel dx="1828" dy="849" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="zccZeLNAu67P_BJFkqPd-1" value="Functional Requirement:&lt;div&gt;- view a list of problems&lt;/div&gt;&lt;div&gt;- view a given problem&lt;/div&gt;&lt;div&gt;- submit their solution and get feedback&lt;/div&gt;&lt;div&gt;- support competitions live leaderboard&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="-121" y="124" width="227" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="zccZeLNAu67P_BJFkqPd-2" value="Nonfunctional Requirments:&lt;div&gt;- Availiability&lt;/div&gt;&lt;div&gt;- Security &amp;amp; isolation when running users code&lt;/div&gt;&lt;div&gt;- Near real time leaderboard&lt;/div&gt;&lt;div&gt;- Scale to support competitions with 100k users&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="-121" y="215" width="269" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="zccZeLNAu67P_BJFkqPd-3" value="Core entities:&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="-121" y="386" width="89" height="41" as="geometry" />
+        </mxCell>
+        <mxCell id="zccZeLNAu67P_BJFkqPd-4" value="Scale:&lt;div&gt;- 100k DAU (5M total accounts)&lt;/div&gt;&lt;div&gt;- 3k problems&lt;/div&gt;&lt;div&gt;- 100k peak for competitions&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="-121" y="308" width="185" height="70" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
