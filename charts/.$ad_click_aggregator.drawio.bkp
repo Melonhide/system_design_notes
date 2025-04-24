@@ -25,8 +25,8 @@
         <mxCell id="GKhWHmmIMckjG3j1GxFx-9" value="ad database" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
           <mxGeometry x="784" y="321" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="GKhWHmmIMckjG3j1GxFx-10" value="Text" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="871" y="315" width="40" height="26" as="geometry" />
+        <mxCell id="GKhWHmmIMckjG3j1GxFx-10" value="ad:&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="874" y="308" width="35" height="41" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
